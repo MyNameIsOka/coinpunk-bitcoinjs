@@ -16,7 +16,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 var conv = require('../convert');
-var UTF8 = require('./crypto').charenc.UTF8;
+var UTF8 = require('./charenc/utf8');
 
 // Constants table
 var zl = [
