@@ -133,11 +133,7 @@ Transaction.prototype.serialize = function ()
   buffer = buffer.concat(util.numToVarInt(this.ins.length));
   for (var i = 0; i < this.ins.length; i++) {
     var txin = this.ins[i];
-
-    // the hash is flipped to what the fuck here?
-    // this seems to be the only thing that I don't understand
-    buffer = buffer.concat(conv.hexToBytes(txin.outpoint.hash));
-
+    buffer = buffer.concat(conv.hexToBytes(txin.outpoint.hash).reverse());
     buffer = buffer.concat(wordsToBytes([parseInt(txin.outpoint.index)]).reverse());
     var scriptBytes = txin.script.buffer;
     buffer = buffer.concat(util.numToVarInt(scriptBytes.length));
