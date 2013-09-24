@@ -6,7 +6,7 @@ code.google.com/p/crypto-js/wiki/License
 */
 
 var conv = require('../convert');
-var UTF8 = require('./crypto').charenc.UTF8;
+var UTF8 = require('./charenc/utf8');
 
 // Initialization round constants tables
 var K = [];

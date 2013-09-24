@@ -25,6 +25,7 @@ var endian = function (n) {
 module.exports = {
     Address: require('./address'),
     Key: require('./eckey'),
+    ECKey: require('./eckey'),
     Message: require('./message'),
     BigInteger: require('./jsbn/jsbn'),
     Script: require('./script'),
@@ -34,14 +35,9 @@ module.exports = {
     TransactionOut: require('./transaction').TransactionOut,
     ECPointFp: require('./jsbn/ec').ECPointFp,
     Wallet: require('./wallet'),
-
     ecdsa: require('./ecdsa'),
-
-    // base58 encoding/decoding to bytes
     base58: require('./base58'),
-
-    // conversions
     convert: require('./convert'),
-
-    endian: endian
+    endian: endian,
+    util: require('./util')
 }
